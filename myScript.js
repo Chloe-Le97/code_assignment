@@ -1,3 +1,5 @@
+//hamburger bar 
+// add class then using css to change the status of hamburger bar
 function onClickMenu() {
     document.getElementById("hamburger").classList.toggle("change");
     document.getElementById("nav").classList.toggle("changenav");
@@ -14,6 +16,8 @@ function CloseMenu() {
     document.querySelector("body").classList.remove("change-bod");
 }
 
+
+// animated number 
 window.addEventListener('scroll',function(event){
     event.preventDefault();
     if (window.scrollY>=400){
@@ -46,25 +50,34 @@ window.addEventListener('scroll',function(event){
 
 });
 
-const RSS_URL = `https://crossorigin.me/https://www.lianatech.com/resources/blog.rss`;
 
-fetch(RSS_URL,{mode: 'no-cors'})
-  .then(response => response.text())
-  .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-  .then(data => {
-    console.log(data)
-    const items = data.querySelectorAll("item");
+// update the latest news according to the RSS 
+// use proxy to solve CORS problem
+// change the title of the latest news as well as update the link to the news
+fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://www.lianatech.com/resources/blog.rss')}`)
+.then(response => {
+	if (response.ok) return response.json()
+	throw new Error('Network response was not ok.')
+})
+.then(data => data.contents)
+.then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+.then(result=>{
+    console.log(result)
+    const items = result.querySelectorAll("item");
     const news_details= document.querySelectorAll(".news_details_title");
     const date_publish = document.querySelectorAll(".news_date");
+    const news_link = document.querySelectorAll(".news_link");
     console.log(news_details)
     for (let i = 0; i < 4; i++) {
         let item = items[i];
         let news_detail = news_details[i];
         let date = date_publish[i];
-        news_detail.innerHTML = item.querySelector('title').innerHTML;
-        date.innerHTML = item.querySelectorAll('pubDate').innerHTML;
+        let link = item.querySelector("link").innerHTML;
+        news_link[i].setAttribute('href',link);
+        console.log(news_link[i])
+        const parseDate = item.querySelector("pubDate").innerHTML.split(' ');
+        news_detail.innerHTML = item.querySelector("title").innerHTML;
+        date.innerHTML = `${parseDate[1]} ${parseDate[2]} ${parseDate[3]}`;
       }
+});
 
-    }
-
-  )

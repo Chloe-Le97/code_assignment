@@ -307,6 +307,8 @@ body::-webkit-scrollbar {
     font-weight: 600;
 }
 
+.news_link{text-decoration: none;cursor: pointer;color: black;}
+
 #ref{
     height: fit-content;
     padding-bottom: 45px;
@@ -376,7 +378,8 @@ body::-webkit-scrollbar {
     border-radius: 7px;
     border: 1px solid #d6d6d6;
     margin: 5px auto;
-    height: 51px;
+    height: 45px;
+    padding: 0 10px;
 }
 
 .subcribe_btn{
@@ -385,10 +388,11 @@ body::-webkit-scrollbar {
     border: none;
     background-color: #4C8930 ;
     display: block;
-    height: 51px;
+    height: 45px;
     color: white;
     font-size: 20px;
     margin: 5px auto;
+    padding: 7px;
 }
 
 .subcribe_form{
@@ -486,6 +490,7 @@ body::-webkit-scrollbar {
     .email_input{
         font-size: 16px;
         height: 35px;
+        padding: 5px;
     }
     .subcribe_btn{
         height: 35px;
