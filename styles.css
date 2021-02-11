@@ -11,20 +11,24 @@ body::-webkit-scrollbar {
 #hamburger-bar{display: none;}
 
 #header_img{
-    height: 595px;
+    height: 700px;
 }
 
 #menu{
     width: 100%;
-    /* padding: 0 60px; */
     margin: 0 auto;
     height: 60px;
     background-color: #4C8930;
+}
+
+.menu_container{
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
-.menu_container{
+.menu_container_text{
     color: white;
     height: 60px;
     display: flex;
@@ -50,13 +54,24 @@ body::-webkit-scrollbar {
 
 
 #logo{
+    width: 100%;
     background-color: white;
-    height: 100px;
-    /* padding: 0 80px; */
+    height: 90px;
     font-size: 16px;
+    position: fixed;
+    top: 60px;
+    z-index: 10;
+    box-shadow: 0 0 15px 0 #0e1a0993;
+    transition: 0.18s;
+}
+
+.logo_img{
+    display: block;
 }
 
 .logo_container{
+    width: 90%;
+    margin: 0 auto;
     height: 110px;
     display: flex;
     flex-direction: row;
@@ -79,6 +94,8 @@ body::-webkit-scrollbar {
 
 .search_bar{
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .search_input{
@@ -401,6 +418,16 @@ body::-webkit-scrollbar {
     flex-wrap: wrap;
 }
 
+.subcribe_noti{
+    text-align: center;
+    color: red;
+}
+
+.subcribe_status{
+    font-size: 18px;
+    font-weight: 600;
+}
+
 #footer{
     background-color: black;
     color: white;
@@ -459,6 +486,7 @@ body::-webkit-scrollbar {
 
 .footer_info_social img{
     cursor: pointer;
+    margin-right: 15px;
     width: 45px;
     height: 45px;
 }
@@ -467,6 +495,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
 }
+
 
 @media screen and (max-width: 800px){
     #image_banner{
@@ -541,8 +570,8 @@ body::-webkit-scrollbar {
     }
     #hamburger {
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 90px;
+        right: 0;
         width: 40px;
         height: 40px;
         cursor: pointer;
@@ -551,7 +580,7 @@ body::-webkit-scrollbar {
       .bar {
         height: 5px;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.76);
+        background-color: rgba(206, 206, 206, 0.76);
         display: block;
         border-radius: 5px;
       }
@@ -575,9 +604,6 @@ body::-webkit-scrollbar {
       }
       .changenav {
         display: block !important;
-      }
-      .change-body {
-        filter: blur(5px);
       }
       .change-bod {
         overflow: hidden;

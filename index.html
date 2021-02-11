@@ -12,32 +12,21 @@
 <body>
 
     <header>
-        <div id="hamburger-bar">
-          <div id="hamburger" onClick="onClickMenu()">
-            <div id="bar1" class="bar"></div>
-            <div id="bar2" class="bar"></div>
-            <div id="bar3" class="bar"></div>
-          </div>
-          <ul class="nav" id="nav">
-            <li><a href="#" onclick="CloseMenu()">Home</a></li>
-            <li><a href="#" onclick="CloseMenu()">Company</a></li>
-            <li><a href="#" onclick="CloseMenu()">Products</a></li>
-            <li><a href="#" onclick="CloseMenu()">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="hamburger-bg" id="hamburger-bg"></div>
+
       </header>
     
     <div id="menu">
-        <div></div>
-        <div class="menu_container">
-            <div class="menu_text">News</div>
-            <div class="menu_text">Intranet</div>
-            <select name="language" class="select_language">
-                <option value="english">In English</option>
-                <option value="finnish">In Finnish</option>
-                <option value="swedish">In Swedish</option>
-            </select>
+        <div class="menu_container"> 
+            <div></div>
+            <div class="menu_container_text">
+                <div class="menu_text">News</div>
+                <div class="menu_text">Intranet</div>
+                <select name="language" class="select_language">
+                    <option value="english">In English</option>
+                    <option value="finnish">In Finnish</option>
+                    <option value="swedish">In Swedish</option>
+                </select>
+            </div>
         </div>
     </div>
 
@@ -57,6 +46,21 @@
             </div>
 
         </div>
+
+        <div id="hamburger-bar">
+            <div id="hamburger" onClick="onClickMenu()">
+              <div id="bar1" class="bar"></div>
+              <div id="bar2" class="bar"></div>
+              <div id="bar3" class="bar"></div>
+            </div>
+            <ul class="nav" id="nav">
+              <li><a href="#" onclick="CloseMenu()">Home</a></li>
+              <li><a href="#" onclick="CloseMenu()">Company</a></li>
+              <li><a href="#" onclick="CloseMenu()">Products</a></li>
+              <li><a href="#" onclick="CloseMenu()">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="hamburger-bg" id="hamburger-bg"></div>
     </div>
 
     <div id='header_img'>
@@ -128,17 +132,17 @@
 
             <div class="news_details_container">
                 <div class="news_date">27.07.2016</div>
-                <a class="news_link" href="#"><div class="news_details_title">Liana Technologies and Encode Solutions merge to create unique mobile solutions</div></a>
+                <a class="news_link" href="#" target="_blank"><div class="news_details_title">Liana Technologies and Encode Solutions merge to create unique mobile solutions</div></a>
             </div>
 
             <div class="news_details_container">
                 <div class="news_date">27.07.2016</div>
-                <a class="news_link" href="#"><div class="news_details_title">From a local startup to a global player: Liana Technologies among the forerunners of digital marketing technology</div></a>
+                <a class="news_link" href="#" target="_blank"><div class="news_details_title">From a local startup to a global player: Liana Technologies among the forerunners of digital marketing technology</div></a>
             </div>
 
             <div class="news_details_container">
                 <div class="news_date">27.07.2016</div>
-                <a class="news_link" href="#"><div class="news_details_title">Liana Technologies and Encode Solutions merge to create unique mobile solutions</div></a>
+                <a class="news_link" href="#" target="_blank"><div class="news_details_title">Liana Technologies and Encode Solutions merge to create unique mobile solutions</div></a>
             </div>
 
         </div>
@@ -188,16 +192,21 @@
 
     <div class="section_divider"></div>
 
-    <div id="subcribe">
+    <div id="subcribe"> 
         <div class="subcribe_container">
             <div class="subcribe_title">Subcribe to our newsletter</div>
             <div class="subcribe_details">Follow our story and get the latest promotional news about our product and events</div>
-            <div class="subcribe_form">
-                <input type='text' class="email_input" placeholder="Your email address"></input>
-                <button class="subcribe_btn">Subcribe</button>
-            </div>
+            <div class="subcribe_noti" style="display: none;" >
+                <div class="subcribe_status">Subcribe sucessfully</div>
+                <div class="subcribe_message">Please check your email</div>
+            </div> 
+            <form class="subcribe_form">
+                <input type='text' class="email_input" placeholder="Your email address"/>
+                <button class="subcribe_btn" type="button" onclick="submitForm()">Subcribe</button>
+            </form>
         </div>
     </div>
+
 
     <div id="footer">
 
