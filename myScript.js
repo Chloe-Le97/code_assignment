@@ -46,7 +46,7 @@ window.addEventListener('scroll',function(event){
 
 });
 
-const RSS_URL = `https://cors-anywhere.herokuapp.com/https://www.lianatech.com/resources/blog.rss`;
+const RSS_URL = `https://crossorigin.me/https://www.lianatech.com/resources/blog.rss`;
 
 fetch(RSS_URL)
   .then(response => response.text())
