@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Liana techologies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div id="hamburger-bar">
+          <div id="hamburger" onClick="onClickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+          </div>
+          <ul class="nav" id="nav">
+            <li><a href="#" onclick="CloseMenu()">Home</a></li>
+            <li><a href="#" onclick="CloseMenu()">Company</a></li>
+            <li><a href="#" onclick="CloseMenu()">Products</a></li>
+            <li><a href="#" onclick="CloseMenu()">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="hamburger-bg" id="hamburger-bg"></div>
+      </header>
+    
+    <div id="menu">
+        <div></div>
+        <div class="menu_container">
+            <div class="menu_text">News</div>
+            <div class="menu_text">Intranet</div>
+            <select name="language" class="select_language">
+                <option value="english">In English</option>
+                <option value="finnish">In Finnish</option>
+                <option value="swedish">In Swedish</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="logo">
+        <div class="logo_container">
+
+            <div class="logo_menu">
+                <img src="assets/liana-logo.png" class="logo_img">
+                <div class="logo_text">Company</div>
+                <div class="logo_text">Products</div>
+                <div class="logo_text">Contact Us</div>
+            </div>
+            
+            <div class="search_bar">
+                <input class="search_input" placeholder="Search">
+                <button class="search_btn">Search</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id='header_img'>
+        <div class="parallax">
+            <div class='header_img_text'>   
+                <div class="header_img_text_caption">Software fueling digital marketing</div>
+                <button class='header_img_btn'>Learn more</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id='image_banner'>
+
+        <div class="image_banner_container">
+            <img src="assets/company.png" class="image_banner_img">
+            <div class="image_banner_title">Company</div>
+        </div>
+
+        <div class="image_banner_container">
+            <img src="assets/products.png" class="image_banner_img"/>
+            <div class="image_banner_title">Products</div>
+        </div>
+
+        <div class="image_banner_container contact">
+            <img src="assets/contact1.png" class="image_banner_img contact_img"/>
+            <div class="image_banner_title contact_title">Contact us</div>
+            <img src="assets/contact2.png" class=".image_banner_img hidden_img"/>
+            <div class="image_banner_title hidden">
+                <h4>Image banner</h4>
+                <div>Get to know our solutions which help us to build the bigger picture piece by piece</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id='number'>
+
+        <div class="number_container">
+            <img src='assets/business.png'>
+            <div class="number_text">
+                <div class="number_text_number" data-target="3000">0</div>
+                <div class="number_text_description">Clients</div>
+            </div>
+        </div>
+
+        <div class="number_container">
+            <img src='assets/face.png'/>
+            <div class="number_text">
+                <div class="number_text_number" data-target="180">0</div>
+                <div class="number_text_description">Employees</div>
+            </div>
+        </div>
+
+        <div class="number_container">
+            <img src='assets/public.png'/>
+            <div class="number_text">
+                <div class="number_text_number" data-target="10000">0</div>
+                <div class="number_text_description">Daily users</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id='news'>
+
+        <div class="news_title">Latest news</div>
+        <div class="news_details">
+
+            <div class="news_details_container">
+                <div class="news_date">27.07.2016</div>
+                <div class="news_details_title">Liana Technologies and Encode Solutions merge to create unique mobile solutions</div>
+            </div>
+
+            <div class="news_details_container">
+                <div class="news_date">27.07.2016</div>
+                <div class="news_details_title">From a local startup to a global player: Liana Technologies among the forerunners of digital marketing technology</div>
+            </div>
+
+            <div class="news_details_container">
+                <div class="news_date">27.07.2016</div>
+                <div class="news_details_title">Liana Technologies and Encode Solutions merge to create unique mobile solutions</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="ref">
+
+        <div class="ref_title">References</div>
+        <div class="ref_details">
+
+            <div class="ref_details_container">
+                <img src="assets/bosch.png" >
+                <div class="ref_details_text">
+                    <div class="ref_details_title">Robert Bosch</div>
+                    <div>Bosch is a multinational engineering and electronics company.</div>
+                </div>
+            </div>
+
+            <div class="ref_details_container">
+                <img src="assets/bodyshop.png" >
+                <div class="ref_details_text">
+                    <div class="ref_details_title">The Body Shop</div>
+                    <div>The Body Shop is a global beauty brand and it has more than 3,000 stores in more than 60 countries.</div>
+                </div>
+            </div>
+
+            <div class="ref_details_container">
+                <img src="assets/lapland.png" >
+                <div class="ref_details_text">
+                    <div class="ref_details_title">Lapland Hotels</div>
+                    <div>Lapland Hotels is the largest and the most diverse hotel chain in Lapland.</div>
+                </div>
+            </div>
+
+            <div class="ref_details_container">
+                <img src="assets/ikea.png" >
+                <div class="ref_details_text">
+                    <div class="ref_details_title">IKEA</div>
+                    <div>IKEA is a multinational furniture store.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section_divider"></div>
+
+    <div id="subcribe">
+        <div class="subcribe_container">
+            <div class="subcribe_title">Subcribe to our newsletter</div>
+            <div class="subcribe_details">Follow our story and get the latest promotional news about our product and events</div>
+            <div class="subcribe_form">
+                <input type='text' class="email_input" placeholder="Your email address"></input>
+                <button class="subcribe_btn">Subcribe</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+
+        <div class="footer_link">
+            <div class="footer_company">Liana Technologies</div>
+            <div class="footer_link_text">
+                <div class="footer_text">Company</div>
+                <div class="footer_text">Products</div>
+                <div class="footer_text">Contact Us</div>
+                <div class="footer_text">News</div>
+                <div class="footer_text">Intranet</div>
+            </div>
+        </div>
+
+        <div class="footer_info">
+            <div class="footer_info_contact">
+                <div>
+                   <strong>Sales and inquiries</strong><br> Email: sales@lianatech.com <br> Phone: +358 10 387 7053
+                </div>
+                <button class="footer_btn">Contact Us</button>    
+            </div>
+
+            <div class="footer_info_social">
+                <img src="assets/facebook.png">
+                <img src="assets/twitter.png">
+                <img src="assets/likedin.png">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="myScript.js"></script>
+</body>
+</html>
