@@ -46,9 +46,9 @@ window.addEventListener('scroll',function(event){
 
 });
 
-const RSS_URL = `https://chloe-le97.github.io/code_assignment/https://www.lianatech.com/resources/blog.rss`;
+const RSS_URL = `https://www.lianatech.com/resources/blog.rss`;
 
-fetch(RSS_URL)
+fetch(RSS_URL,{mode:'no_cors'})
   .then(response => response.text())
   .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
   .then(data => {
