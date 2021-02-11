@@ -48,7 +48,7 @@ window.addEventListener('scroll',function(event){
 
 const RSS_URL = `https://crossorigin.me/https://www.lianatech.com/resources/blog.rss`;
 
-fetch(RSS_URL)
+fetch(RSS_URL,{mode: 'no-cors'})
   .then(response => response.text())
   .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
   .then(data => {
