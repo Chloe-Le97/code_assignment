@@ -14,19 +14,6 @@ function CloseMenu() {
     document.querySelector("body").classList.remove("change-bod");
 }
 
-// logo position
-window.addEventListener('scroll',(event)=>{
-    event.preventDefault();
-    if (window.scrollY>=10){
-        document.querySelector("#logo").style.top="0";
-        document.querySelector("#hamburger").style.top="30px";
-    }
-    else{
-        document.querySelector("#logo").style.top="60px";
-        document.querySelector("#hamburger").style.top="90px"
-    }
-});
-
 
 // animated number 
 window.addEventListener('scroll',(event)=>{
@@ -41,6 +28,7 @@ window.addEventListener('scroll',(event)=>{
                 const count = Number(counter.innerHTML);
 
                 const inc = target/speed;
+                // const inc = 1;
 
                 if(count < target){
                     counter.innerHTML = Math.ceil(count + inc)
@@ -74,6 +62,9 @@ fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://www.lian
 .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
 .then(result=>{
     const items = result.querySelectorAll("item");
+    
+    console.log(items)
+
     const news_details= document.querySelectorAll(".news_details_title");
     const date_publish = document.querySelectorAll(".news_date");
     const news_link = document.querySelectorAll(".news_link");
@@ -82,6 +73,7 @@ fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://www.lian
         let news_detail = news_details[i];
         let date = date_publish[i];
         let link = item.querySelector("link").innerHTML;
+
         news_link[i].setAttribute('href',link);
         const parseDate = item.querySelector("pubDate").innerHTML.split(' ');
         news_detail.innerHTML = item.querySelector("title").innerHTML;
